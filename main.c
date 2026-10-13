@@ -1,8 +1,17 @@
 #include <stdio.h>
-#include<string.h>
 
 int main(void) {
-    char input[256];
-    scanf("%255s", &input);
-    printf("%d", strlen(input));
+    int nums[5];
+    for (int i = 0; i < 5; i++) scanf("%d", &nums[i]);
+
+    int best = nums[0];
+
+    for (int i = 0; i < 5; i++) {
+        if (nums[i] > best) {
+            best = nums[i];
+        }
+    }
+
+    printf("%d\n", best);
+    return 0;
 }
