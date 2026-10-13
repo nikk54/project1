@@ -1,17 +1,10 @@
 #include <stdio.h>
 
 int main(void) {
-    int nums[5];
-    for (int i = 0; i < 5; i++) scanf("%d", &nums[i]);
-
-    int best = nums[0];
-
-    for (int i = 0; i < 5; i++) {
-        if (nums[i] > best) {
-            best = nums[i];
-        }
+    char line[100];
+    fgets(line, sizeof line, stdin);
+    int i;
+    for (i = 0; line[i] != '\0' || line[i] != '\n'; i++) {
     }
-
-    printf("%d\n", best);
-    return 0;
+    printf("%d", i);
 }
