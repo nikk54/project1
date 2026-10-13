@@ -1,10 +1,16 @@
 #include <stdio.h>
+#include<string.h>
 
 int main(void) {
-    char line[100];
+    char line[100] = "";
     fgets(line, sizeof line, stdin);
-    int i;
-    for (i = 0; line[i] != '\0' || line[i] != '\n'; i++) {
+
+    for (int i = 0; line[i] != '\0'; i++) {
+        if (line[i] == '\n') {
+            line[i] = '\0';
+            break;
+        }
     }
-    printf("%d", i);
+
+    printf("%d", (int) strlen(line));
 }
