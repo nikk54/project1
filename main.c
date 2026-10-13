@@ -2,15 +2,15 @@
 #include<string.h>
 
 int main(void) {
-    char line[100] = "";
-    fgets(line, sizeof line, stdin);
-
-    for (int i = 0; line[i] != '\0'; i++) {
-        if (line[i] == '\n') {
-            line[i] = '\0';
-            break;
-        }
+    int val;
+    scanf("%d", &val);
+    if (val % 15 == 0) {
+        printf("FizzBuzz");
+    } else if (val % 3 == 0) {
+        printf("Fizz");
+    } else if (val % 5 == 0) {
+        printf("Buzz");
+    } else {
+        printf("%d", val);
     }
-
-    printf("%d", (int) strlen(line));
 }
